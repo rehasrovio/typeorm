@@ -1,7 +1,6 @@
-import { AppDataSource } from "../data-source";
-import { User } from "../entity/User";
-import { Profile } from "../entity/uprofile";
-
+import { AppDataSource } from "../../dataSource/data-source";
+import { Profile } from "../../entity/basicPractice/uprofile";
+import { User } from "../../entity/basicPractice";
 AppDataSource.initialize().then(async() =>{
     console.log('connection estabilished')
     const profile = new Profile();
@@ -9,8 +8,8 @@ AppDataSource.initialize().then(async() =>{
     profile.qualification = 'B.E/ECE'
     await AppDataSource.manager.save(profile);
     const user = new User();
-    user.firstName = 'rovio'
-    user.lastName = 'rehas'
+    user.firstName = 'roh'
+    user.lastName = 'scar'
     user.age = 21
     user.profile = profile
     console.log('hii.............................')

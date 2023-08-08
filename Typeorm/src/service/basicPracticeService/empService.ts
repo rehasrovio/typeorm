@@ -1,7 +1,6 @@
-import { error } from "console"
-import {AppDataSource} from "../data-source"
-import { Employee } from "../entity/employee"
-import { Name } from "../entity/name"
+import { AppDataSource } from "../../dataSource/data-source";
+import { Employee } from "../../entity/basicPractice/employee";
+import { Name } from "../../entity/basicPractice/name";
 
 AppDataSource.initialize().then(async () => {
     console.log('hi!!')

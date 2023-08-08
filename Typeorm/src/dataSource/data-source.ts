@@ -1,8 +1,7 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
-import { User } from "./entity/User"
-import { Employee } from "./entity/employee"
-import { Profile } from "./entity/uprofile";
+import { Actor } from "../entity/manyToMany/example2/actors"
+import { Movie } from "../entity/manyToMany/example2/movies"
 
 export const AppDataSource = new DataSource({
     type: "mysql",
@@ -10,10 +9,10 @@ export const AppDataSource = new DataSource({
     port : 3306,
     username : "root",
     password : "root",
-    database : "typeorm",
+    database : "sys",
     synchronize: true,
     logging: true,
-    entities: [User,Employee,Profile],
+    entities: [Actor, Movie],
     migrations: [],
     subscribers: [],
     dropSchema: true

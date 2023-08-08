@@ -14,7 +14,7 @@
       "reflect-metadata": "^0.1.13"
    },
    "scripts": {
-      "start": "ts-node src/service/userService.ts",
+      "start": "ts-node src/service/manyToManyServices/filmService.ts",
       "typeorm": "typeorm-ts-node-commonjs"
    }
 }
